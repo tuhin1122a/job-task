@@ -16,25 +16,47 @@ export default function RepoHeader({
       <h1 className="text-2xl font-bold w-full"> ThemeFisher Repo Explorer</h1>
       <input
         type="text"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
         placeholder="Search Repo..."
         className=" bordar rounded px-3 py 2 w-full sm:w-64"
       />
       {/* languge sort */}
-      <select className="border rounded px-3 py-2 ">
-        <option>Language</option>
+      <select
+        value={seletedLanguage}
+        onChange={(e) => setSeletedLanguage(e.target.value)}
+        className="border rounded px-3 py-2 "
+      >
+        {language.map((lan) => (
+          <option key={lan} value={lan}>
+            {lan}
+          </option>
+        ))}
       </select>
       {/* Name sort */}
-      <select className="border rounded px-3 py-2 ">
+      <select
+        value={sortByName}
+        onChange={(e) => setSortByName(e.target.value)}
+        className="border rounded px-3 py-2 "
+      >
         <option>none</option>
         <option>A-Z</option>
         <option>Z-A</option>
       </select>
-      <select className="border rounded px-3 py-2 ">
+      <select
+        value={sortByStars}
+        onChange={(e) => satSortByStars(e.target.value)}
+        className="border rounded px-3 py-2 "
+      >
         <option>none</option>
         <option>low-High</option>
         <option>High-Low</option>
       </select>
-      <select value="Forks " className="border rounded px-3 py-2 ">
+      <select
+        value={sortByFroks}
+        onChange={(e) => satSortByFroks(e.target.value)}
+        className="border rounded px-3 py-2 "
+      >
         <option>none</option>
         <option>Low-High</option>
         <option>High-Low</option>

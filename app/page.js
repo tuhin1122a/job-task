@@ -54,8 +54,10 @@ export default function Home() {
     const matchLanguage =
       seletedLanguage === "All language" || repo.lamguage === seletedLanguage;
   });
+  console.log(filteredRepos);
   // sort
   let sortedRepos = [...filteredRepos];
+  console;
   if (sortByName !== "none") {
     sortedRepos.sort((a, b) =>
       sortByName === "acc"
@@ -89,7 +91,7 @@ export default function Home() {
         seletedLanguage={seletedLanguage}
         setSeletedLanguage={setSeletedLanguage}
       />
-      <RepoList repos={repos} />
+      <RepoList repos={sortedRepos} />
       <RepoFooter />
     </div>
   );
