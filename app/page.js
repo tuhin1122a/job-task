@@ -68,7 +68,7 @@ export default function Home() {
   }
   if (sortByStars !== "none") {
     sortedRepos.sort((a, b) =>
-      sortByStars === "acc" ? a.star - b.satr : b.star - a.star
+      sortByStars === "acc" ? a.stars - b.stars : b.stars - a.stars
     );
   }
   if (sortByFroks !== "none") {
