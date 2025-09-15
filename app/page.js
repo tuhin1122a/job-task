@@ -62,8 +62,8 @@ export default function Home() {
   if (sortByName !== "none") {
     sortedRepos.sort((a, b) =>
       sortByName === "acc"
-        ? a.name.localCompare(b.name)
-        : b.name.localCompare(a.name)
+        ? a.name.localeCompare(b.name)
+        : b.name.localeCompare(a.name)
     );
   }
   if (sortByStars !== "none") {
