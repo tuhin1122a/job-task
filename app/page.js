@@ -52,7 +52,8 @@ export default function Home() {
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
     const matchLanguage =
-      seletedLanguage === "All language" || repo.lamguage === seletedLanguage;
+      seletedLanguage === "All language" || repo.language === seletedLanguage;
+    return matchSearch && matchLanguage;
   });
   console.log(filteredRepos);
   // sort
