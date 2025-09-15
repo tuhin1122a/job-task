@@ -39,27 +39,27 @@ export default function RepoHeader({
         onChange={(e) => setSortByName(e.target.value)}
         className="border rounded px-3 py-2 "
       >
-        <option>none</option>
-        <option>A-Z</option>
-        <option>Z-A</option>
+        <option value="none">none</option>
+        <option value="acc">A-Z</option>
+        <option value="desc">Z-A</option>
       </select>
       <select
         value={sortByStars}
         onChange={(e) => satSortByStars(e.target.value)}
         className="border rounded px-3 py-2 "
       >
-        <option>none</option>
-        <option>low-High</option>
-        <option>High-Low</option>
+        <option value="none">none</option>
+        <option value="acc">Low-High</option>
+        <option value="desc">High-Low</option>
       </select>
       <select
         value={sortByFroks}
         onChange={(e) => satSortByFroks(e.target.value)}
         className="border rounded px-3 py-2 "
       >
-        <option>none</option>
-        <option>Low-High</option>
-        <option>High-Low</option>
+        <option value="none">none</option>
+        <option value="acc">Low-High</option>
+        <option value="desc">High-Low</option>
       </select>
     </header>
   );
